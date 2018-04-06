@@ -18,3 +18,13 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+
+deploy:
+  repo: apollo-rsps/apollo-rsps.github.io
+  provider: pages
+  skip-cleanup: true
+  local-dir: docs/build/docs/html5
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: kotlin-experiment-docs
