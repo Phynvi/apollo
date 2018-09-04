@@ -17,7 +17,7 @@ after_success:
   - chmod 600 gradle/config/github_deploy_key
   - eval $(ssh-agent -s)
   - ssh-add gradle/config/github_deploy_key
-  - test $TRAVIS_BRANCH = "kotlin-experiment-docs" && gradle :docs:publishGhPages
+  - test $TRAVIS_BRANCH = "kotlin-experiments-docs" && gradle :docs:publishGhPages
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
